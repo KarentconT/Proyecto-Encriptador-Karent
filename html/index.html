@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="../imagenes/LogoAlura.png" alt="Logo de Alura latam">
+    </header>
+    <main>
+        <section class="contenido_izq">
+            <textarea id="mensaje" class="input_texto" placeholder="Ingrese su texto aca"></textarea>
+            <p>Solo ingrese unicamente palabras en minuscula y sin acentos</p>
+            <div class="contenedor_botones">
+                <button class="boton_encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="boton_desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </section>
+        <section id="contenido_der" class="contenido_der">
+            <section id="contenido_der_noeditable" class="contenido_der_noeditable">
+                <img class="imagen_textarea" src="../imagenes/Transcripcion.png">
+                <h2>Ningun mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar y desencriptar</p>
+            </section>
+            <section class="contenido_der_editable">
+                <textarea id="mensajeEncriptado" class="output_texto" readonly></textarea>
+                <button id="boton_copiar" class="boton_copiar" onclick="copiar()" style="visibility: hidden">Copiar</button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>Desarrollado por Karent Lizzeth Acuña Rodriguez para AluraLatam</p>
+        <div>
+            <a href="https://github.com/KarentconT"><img class="iconos" src="../imagenes/icono-github.png" alt="Este es un icono de github"></a>
+        </div>
+    </footer>
+    <script src="../js/app.js"></script>
+</body>
+</html>

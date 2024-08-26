@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+    --fuente_inputs_outputs:"Cormorant Garamond", serif;
+    --fuente_contenido:"Josefin Slab", serif;
+    --color1:rgb(83, 117, 46);
+    --color2:white;
+    --color3:rgb(71, 87, 53);
+    --color4:rgb(144, 50, 27);
+    --color5:rgb(100, 46, 32);
+    --color6:rgb(218, 219, 182);
+    --color7:linear-gradient(rgb(53, 165, 94),rgb(101, 230, 170));
+    --transparente:rgba(255, 255, 255, 0);
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    font-family: var(--fuente_contenido);
+}
+body{
+    height: 100vh;
+    background-color: rgb(224, 224, 224);
+}
+header{
+    height: 15vh;
+}
+.logo{
+    padding: 2% 6% ;
+}
+main{
+    height:75vh;
+    padding: 0% 10%;
+    display: flex;
+    gap:2vw;
+
+}
+.contenido_izq{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+.input_texto{
+    font-family: var(--fuente_inputs_outputs);
+    font-size: 1.3rem;
+    color:var(--color1);
+    background-color:var(--transparente);
+    height: 60vh;
+    resize: none;
+    border-style: none;
+}
+.input_texto:focus{
+    outline: none;
+}
+.contenedor_botones{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 5%;
+}
+.boton_encriptar{
+    background-color: var(--color1);
+    color: var(--color2);
+    font-size: 0.9rem;
+    border-style: none;
+    border-radius: 10px;
+    width: 15vw;
+    padding: 2% 0%;
+}
+.boton_encriptar:hover{
+    background-color: var(--color3);
+    transition: 0.5s;
+}
+.boton_desencriptar{
+    background-color: var(--color4);
+    font-size: 0.9rem;
+    border-style: none;
+    border-radius: 10px;
+    width: 15vw;
+    padding: 2% 0%;
+}
+.boton_desencriptar:hover{
+    background-color: var(--color5);
+    transition: 0.5s;
+}
+.contenido_der{
+    background-color: var(--color6);
+    border-radius: 8px;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 10px;
+}
+.contenido_der_editable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido_der_noeditable{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 35vw;
+}
+.contenido_der_noeditable p,h2{
+    text-align: center;
+}
+.boton_copiar{
+    border: 2px solid var(--color1);
+    border-radius: 10px;
+    width: 35vw;
+    padding: 5px;
+    background-color: var(--color6);
+}
+.imagen_textarea{
+    width: 15vw;
+    min-width:300px ;
+}
+.output_texto{
+    background-color: var(--transparente);
+    font-family: var(--fuente_inputs_outputs);
+    font-size: 1.5rem;
+    color:var(--color1);
+    width: 37vw;
+    height: 60vh;
+    resize: none;
+    border-style: none;
+}
+.output_texto:focus{
+    outline: none;
+}
+footer{
+    background: var(--color7);
+    height:10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+footer p{
+    font-size: 0.7rem;
+    text-align: center;
+}
+.iconos{
+    width: 30px;
+}
+@media (max-width:768px) {
+    *{
+        font-size: 25px;
+    }
+    header{
+        height: 10vh;
+    }
+    main{
+        height:80vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido_izq{
+        width: 80vw;
+        height: 40vh;
+    }
+    .boton_encriptar{
+        width: 35vw;
+    }
+    .boton_desencriptar{
+        width: 35vw;
+    }
+    .contenido_der{
+        width: 80vw;
+        height: 30vh;
+    }
+    .boton_copiar{
+        width: 75vw;
+    }
+    .contenido_der_noeditable{
+        max-width: 75vw;
+    }
+    .output_texto{
+        width: 75vw;
+        height: 26vh;
+    }
+    .imagen_textarea{
+        display: none;
+    }
+    
+}
+@media (max-width:375px) {
+    *{
+        font-size: 25px;
+    }
+    header{
+        height: 10vh;
+    }
+    main{
+        height:80vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido_izq{
+        width: 80vw;
+        height: 40vh;
+    }
+    .contenedor_botones{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 2% 5%;
+        align-items: center;
+    }
+    .boton_encriptar{
+        width: 60vw;
+    }
+    .boton_desencriptar{
+        width: 60vw;
+    }
+    .contenido_der{
+        width: 80vw;
+        height: 30vh;
+    }
+    .boton_copiar{
+        width: 75vw;
+    }
+    .output_texto{
+        width: 75vw;
+        height: 26vh;
+    }
+    .imagen_textarea{
+        display: none;
+    }
+    
+}
